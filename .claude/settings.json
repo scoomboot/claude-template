@@ -1,0 +1,25 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|MultiEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/emoessner/code/LexCore/.claude/scripts/track-edits.sh add"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/emoessner/code/LexCore/.claude/scripts/session-style-check.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
